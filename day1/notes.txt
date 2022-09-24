@@ -1,0 +1,10 @@
+Mithril Emmet  v0.7.7 FallenMax
+open in browser v2.0.0 TechER
+Prettier - Code formatter v9.9.0 Prettier
+vscode-icons v11.17.0 VSCode Icons Team
+
+=========================================
+
+html:5
+!
+
