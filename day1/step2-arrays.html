@@ -5,7 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arrays</title>
-    
+    <script>
+        // number, string, boolean, array, function 
+        var favNums = [9,45,18,78,3,27,99,12,56,15,77];
+
+       /*  
+        for(var i = 0; i < favNums.length; i++){
+           console.log("Favorite number is ", favNums[i] );
+        }; 
+       */
+       // ES6
+      /*  
+       favNums.forEach(function(val, idx, arr){
+        //console.log("Favorite number is ", val, " index is ",idx, arr );
+        console.log("Favorite number is ", arr[idx], " index is ",idx, arr );
+       }) 
+       */
+
+      /*  
+       var doubleFavNums = favNums.map(function(val, idx, arr){
+        return val * 2
+       }) ;
+       console.log( favNums )
+       console.log( "++++++++++++++++++++++++++++++++++++" )
+       console.log( doubleFavNums )
+       */
+        /* 
+       var greaterThan50 = favNums.filter(function(val, idx, arr){
+        return val > 50
+       })
+
+       console.log( greaterThan50 ); 
+       */
+
+      /* 
+      var someValuesLessThan10 = favNums.some(function(val, idx, arr){
+        return val < 10;
+      });
+
+      console.log( someValuesLessThan10 ); 
+      */
+     /*
+        var everyValueGreaterThan50 = favNums.every(function(val, idx, arr){
+         return val > 50;
+        });
+        console.log( everyValueGreaterThan50 );
+     */
+
+     var total = favNums.reduce(function(initVal, val, idx, arr){
+        return initVal + val;
+     },0);
+
+     console.log( total );
+
+        </script>
 </head>
 <body>
     
