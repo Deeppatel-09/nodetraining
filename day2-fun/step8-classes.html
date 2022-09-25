@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+    <script>
+        /*
+        public
+            properties
+            methods
+        private 
+            properties
+            methods
+        static
+            properties
+            methods
+        constructor
+        get
+        set
+        inheritance
+        */
+
+        class Person{
+            canWalk = "default value";
+            constructor(message){
+                this.canWalk = message;
+            }
+        }
+
+        class Hero extends Person{
+            // public
+            firstname ;
+            lastname ;
+            // private
+            #mission = "my personal mission";
+            //static
+            static power = 5;
+            constructor(hfname, hlname, cwmessage){
+                super(cwmessage);
+                this.firstname = hfname;
+                this.lastname = hlname;
+            }
+            // public
+            sayFullName(){
+                return this.firstname+" "+this.lastname;
+            }
+            // private
+            #sayVersion(){
+                return 101;
+            }
+            externalVersion(){
+                return this.#sayVersion() * 2;
+            }
+            get mission(){
+                return this.#mission;
+            }
+            set mission(nmission){
+                this.#mission = nmission;
+            }
+        };
+
+        let hero = new Hero("Tony","Stark", "I can fly");
+        console.log( hero.firstname );
+        console.log( hero.mission );
+        console.log( hero.sayFullName() );
+        console.log( hero.externalVersion() );
+        console.log( Hero.power );
+        console.log( hero.mission );// getter 
+        hero.mission = "Save the world"; // setter
+        console.log( hero.mission );// getter 
+        console.log( hero.canWalk ); // inherited property 
+
+     /*    let person = new Person("I can walk");
+        console.log( person.canWalk ); */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

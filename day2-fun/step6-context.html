@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var username = "intellipaat";
+        var obj = {
+            username : "vijay",
+            sayname : function(){
+                var convertToUpperCase = () => {
+                    //return "hi";
+                    return this.username = this.username.toUpperCase();
+                };
+                return convertToUpperCase();
+            }
+        };
+
+        console.log( obj.sayname() );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
