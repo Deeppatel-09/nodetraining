@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        h1 Pug Template
+        h1 Title  #{ title }
+        if error
+            p Error :  #{error};
+        form(method="post")
+            label(for="nhero") New Hero : 
+            input(type="text" id="nhero" name="nhero")  
+            button(type="submit") Add Hero
+        ul
+            each hero in heroes
+                li #{ hero }

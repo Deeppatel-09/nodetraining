@@ -1,0 +1,4 @@
+const app = require("express")();
+let server = app.listen(function(){
+    console.log("express is now live on localhost:",server.address().port);
+});
